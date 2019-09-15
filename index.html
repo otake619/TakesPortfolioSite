@@ -9,6 +9,9 @@
     <title>Take's Portfolio</title>
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--FontAwesome読み込み-->
+    <script src="https://kit.fontawesome.com/28acec4c9b.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
     <!--stylesheet読み込み-->
     <link href="./css/style.css" rel="stylesheet">
     <!-- jQuery読み込み -->
@@ -31,16 +34,13 @@
             <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">logo</a>
+            <a class="nav-link" href="#story">Story</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Skills</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Story</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -48,7 +48,8 @@
     <!-- 1番目のsection -->
     <section id="top" class="text-center">
       <div class="container-fluid" style="font-family: 'Josefin Sans', sans-serif;">
-        <h1 class="top-text display-3 text-black" style="position: absolute">Take's Portfolio</h1>
+        <h1 class="display-3 text-black position-absolute" id="title">Take's Portfolio</h1>
+        <i class="fas fa-arrow-down"></i>
       </div>
     </section>
     <!--2番目のsection -->
@@ -94,7 +95,11 @@
       <br>
     </section>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <script type="text/javascript" src="js/jquery.lettering.js"></script>
+    <script type="text/javascript" src="js/jquery.textillate.js"></script>
     <script type="text/javascript">
+      //ナビゲーションバーをfadeInfadeOutする
       var startPosition = 0;
       var windowScrollTop = 0;
       $(window).on('scroll',function(){
@@ -107,6 +112,65 @@
         }
         startPosition = windowScrollTop;
       });
+      //isScrolledIntoViewを定義
+      function isScrolledIntoView(elem) {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+
+      var elemTop = $(elem).offset().top;
+      var elemBottom = elemTop + $(elem).height();
+
+      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+      }
+      //titleの表示非表示
+      var switchTitleDisp = false;
+      
+      //titleをfadeInfadeOutする
+      $(window).scroll(function(){
+        if(isScrolledIntoView($('#top')) == true ){
+          
+          
+        } else {
+          //何もしない
+          
+        }
+      });
+      //titleの表示、非表示を繰り返す
+      $(function () {
+    $('#title').textillate({
+      //繰り返し
+      loop: true,  
+      // アニメーションの間隔時間
+      minDisplayTime: 3000,  
+      // アニメーション開始までの遅延時間
+      initialDelay: 1000,  
+      // アニメーションの自動スタート
+      autoStart: true,  
+  
+      // 開始時のアニメーション設定
+      in: {
+        // エフェクトの指定
+        effect: 'fadeIn',  
+        // 遅延時間の指数
+        delayScale: 1.5,  
+        // 文字ごとの遅延時間
+        delay: 50,  
+        // true:アニメーションをすべての文字に同時適用
+        sync: false,  
+        // true:文字表示がランダムな順に表示される
+        shuffle: false
+      },  
+  
+      // 終了時のアニメーション設定
+      out: {
+        effect: 'fadeOut',  
+        delayScale: 1.5,  
+        delay: 50,  
+        sync: false,  
+        shuffle: false
+      }
+    });
+})
     </script>
   </body>
 </html>

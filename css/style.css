@@ -5,3 +5,28 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#title{
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  margin: auto;
+  color: aliceblue;
+}
+
+i{
+  color: aliceblue;
+  font-size: 50px;
+  position: absolute;
+  animation: moveY 2s infinite alternate linear;
+  -ms-animation: moveY 2s infinite alternate linear;
+  -webkit-animation: moveY 2s infinite alternate linear;
+  -moz-animation: moveY 2s infinite alternate linear;
+}
+
+@keyframes moveY{
+  0%{top:0px;}
+  50%{top:30px;}
+  100%{top: 0px;}
+}
