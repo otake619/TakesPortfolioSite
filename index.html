@@ -9,6 +9,8 @@
     <title>Take's Portfolio</title>
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--stylesheet読み込み-->
+    <link href="./css/style.css" rel="stylesheet">
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
@@ -18,7 +20,7 @@
   </head>
   <body>
     <!--ナビゲーションバー-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-family: 'Josefin Sans', sans-serif;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="font-family: 'Josefin Sans', sans-serif;display: none;">
       <a class="navbar-brand" href="#">Take's Portfolio</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,7 +31,7 @@
             <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">logo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Skills</a>
@@ -46,15 +48,65 @@
     <!-- 1番目のsection -->
     <section id="top" class="text-center">
       <div class="container-fluid" style="font-family: 'Josefin Sans', sans-serif;">
-        <h1 class="top-text display-3 text-black">Take's Portfolio</h1>
-        
+        <h1 class="top-text display-3 text-black" style="position: absolute">Take's Portfolio</h1>
       </div>
     </section>
+    <!--2番目のsection -->
+    <section id="logo">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
     <script type="text/javascript">
-    
-    
-    
-    
+      var startPosition = 0;
+      var windowScrollTop = 0;
+      $(window).on('scroll',function(){
+        windowScrollTop = $(this).scrollTop();
+        if(windowScrollTop >= startPosition){
+          $('.navbar').fadeIn(1500);
+        }else{
+          //非表示にする
+          $('.navbar').fadeOut(1500);
+        }
+        startPosition = windowScrollTop;
+      });
     </script>
   </body>
 </html>

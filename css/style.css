@@ -1,0 +1,7 @@
+#top{
+  background: url(../images/brand.gif);
+  min-height: 100vh;
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
