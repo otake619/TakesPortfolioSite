@@ -6,18 +6,95 @@
   background-size: cover;
 }
 
+/*
+a.anchor{
+  padding-top: 1200px;
+  margin-top: -1200px;
+  display: block;
+}
+*/
+
+
+
+#about{
+  margin-bottom: 12rem;
+  margin-top: 7rem;
+}
+#place{
+  background: url(../images/Orange-Sunset-19860.gif);
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+  opacity: 0.8; 
+  background-color: white;
+  padding-top: 20%
+}
+
+#hometown{
+  color: aliceblue;
+}
+
 #title{
-  top: 50%;
+/*
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+*/
+/*  margin: auto;*/
+  color: aliceblue;
+  white-space: pre-wrap;
+  padding-top: 40vh;
+}
+
+/*
+#arrow{
+  top: 0%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   -webkit- transform: translateY(-50%) translateX(-50%);
   margin: auto;
   color: aliceblue;
 }
+*/
+
+#contact{
+  margin-top: 6rem;
+}
+
+#contact_title{
+  font-size: 3rem;
+}
+
+form{
+  font-family: 'Josefin Sans', sans-serif!important;
+}
+
+#footer_Twitter{
+  font-family: 'Josefin Sans', sans-serif!important;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+#footer_Qiita{
+  font-family: 'Josefin Sans', sans-serif!important;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+#navigation{
+  background-color:cadetblue;
+}
+
+.nav-link{
+  color: aliceblue;
+  font-family: 'Josefin Sans', sans-serif!important;
+}
+#skill_Set{
+  margin-bottom: 3rem;
+}
 
 i{
   color: aliceblue;
-  font-size: 50px;
+  font-size: 50px!important;
   position: absolute;
   animation: moveY 2s infinite alternate linear;
   -ms-animation: moveY 2s infinite alternate linear;
@@ -25,8 +102,34 @@ i{
   -moz-animation: moveY 2s infinite alternate linear;
 }
 
-@keyframes moveY{
-  0%{top:0px;}
-  50%{top:30px;}
-  100%{top: 0px;}
+#footer{
+  margin-bottom: 3rem;
 }
+
+@keyframes moveY{
+  0%{top:70%;}
+  50%{top:75%;}
+  100%{top: 70%;}
+}
+
+#myphoto{
+  max-height: 60vh;
+  margin-bottom: 3rem;
+}
+
+#english{
+  margin-bottom: 1rem;
+}
+
+p{
+  font-family: 'Josefin Sans', sans-serif!important;
+}
+
+#contact_title{
+  font-family: 'Josefin Sans', sans-serif!important;
+}
+
+#skills{
+  margin-top:3rem;
+}
+
